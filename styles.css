@@ -1,0 +1,28 @@
+
+header {
+	width: 100vw;
+	background-color: #294D28;
+}
+
+header > div {
+	background-color: #CCE4CC;
+}
+
+body {
+	background-color: #E8F3E8;
+}
+
+.container {
+	width: 60%;
+	margin: 0px auto;
+		
+}
+
+#map {
+	background-color: #84BE83;
+}
+
+footer {
+	background-color: #0A3409;
+	color: #559E54;
+}
