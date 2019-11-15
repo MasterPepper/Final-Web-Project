@@ -2,47 +2,93 @@
 <html>
 
 <head>
-    <link href='CSS/styles.css' rel='stylesheet' />
-	<meta name="viewport" content="width="device-width, initial-scale=1>
+    <link href="CSS/styles.css" rel="stylesheet" >
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Mapbox Links & Styles -->
+	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js"></script>
+	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	<!-- Bootstrap Links & Styles -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
 </head>
 
-<header>
-	<div class="tabs">
-		Home
-	</div>
-	<div class="tabs">
-		About 
-	</div>
-	<div id="headerMain">
-		Beyond Toxis
-	</div>
-</header>
-
 <body>
-	<div id="map"></div>
-	<h1> The Problem With Aerials Spraying </h1>
-	<p>
-		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-	</p>
-	<p>
-		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-	</p>
-	<p>
-		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-	</p>
+
+	<header>
+	
+		<div class="row">
+			<div class="col-1">
+			</div>
+			<div class="col-1">
+				<div class="tabs">
+					Home
+				</div>
+			</div>
+			<div class="col-1">
+				<div class="tabs">
+					About
+				</div>
+			</div>
+			<div class="col-9" id="headerMain">
+				Beyond Toxics
+			</div>
+			
+			<div class="col-1"></div>
+				
+			</div>
+		
+	</header>
+
+	<div class="row">
+		<div class="col-12">
+			<div id="map"></div>
+		</div>
+	</div>
+
+	<div class="container">
+		<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id donec ultrices tincidunt arcu non sodales neque sodales. Lobortis elementum nibh tellus molestie nunc non. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Sit amet consectetur adipiscing elit ut aliquam purus. Egestas pretium aenean pharetra magna ac. Tristique senectus et netus et malesuada. Quam quisque id diam vel quam elementum pulvinar etiam. Sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus. Enim sed faucibus turpis in eu mi bibendum neque egestas. Eu turpis egestas pretium aenean pharetra magna ac. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Magna fringilla urna porttitor rhoncus dolor purus non enim. Adipiscing vitae proin sagittis nisl rhoncus. Adipiscing vitae proin sagittis nisl rhoncus mattis. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Libero justo laoreet sit amet cursus sit amet dictum sit. Mauris nunc congue nisi vitae suscipit tellus mauris a.
+			</p>
+			<p>
+				Ultrices gravida dictum fusce ut placerat orci nulla. Lacus viverra vitae congue eu consequat ac felis. Venenatis urna cursus eget nunc scelerisque viverra. Elementum curabitur vitae nunc sed velit dignissim. Vel quam elementum pulvinar etiam non. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Suspendisse in est ante in nibh mauris cursus mattis. Vitae tempus quam pellentesque nec. Turpis egestas integer eget aliquet. Non curabitur gravida arcu ac. Ut venenatis tellus in metus vulputate eu scelerisque felis. Quis eleifend quam adipiscing vitae proin sagittis. Amet massa vitae tortor condimentum lacinia quis vel. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Tortor id aliquet lectus proin nibh nisl condimentum id venenatis. Velit sed ullamcorper morbi tincidunt ornare. Neque convallis a cras semper auctor. Faucibus nisl tincidunt eget nullam non nisi est sit. Sapien eget mi proin sed libero enim.
+		</p>
+		<p>
+				Aliquam ut porttitor leo a diam. Urna nunc id cursus metus aliquam eleifend mi. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Neque vitae tempus quam pellentesque nec nam aliquam. Auctor urna nunc id cursus metus. Porttitor rhoncus dolor purus non enim. Quis viverra nibh cras pulvinar mattis nunc. Id semper risus in hendrerit gravida rutrum quisque. Ligula ullamcorper malesuada proin libero nunc consequat interdum. Amet purus gravida quis blandit turpis cursus in. Nibh praesent tristique magna sit amet. Massa sapien faucibus et molestie. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl.
+		</p>
+		<p>
+				Egestas egestas fringilla phasellus faucibus. Gravida in fermentum et sollicitudin. Ullamcorper velit sed ullamcorper morbi. Potenti nullam ac tortor vitae purus. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh sit. Diam quam nulla porttitor massa id neque aliquam vestibulum. Egestas diam in arcu cursus euismod quis viverra nibh. Purus ut faucibus pulvinar elementum integer enim neque volutpat ac. Proin fermentum leo vel orci porta non pulvinar. Neque sodales ut etiam sit amet nisl purus in mollis. Enim neque volutpat ac tincidunt vitae semper. Urna condimentum mattis pellentesque id nibh tortor id. Cras semper auctor neque vitae tempus. Quisque non tellus orci ac auctor augue. Ut eu sem integer vitae justo eget magna. Tristique senectus et netus et malesuada fames ac turpis. Orci ac auctor augue mauris augue neque. Urna condimentum mattis pellentesque id. Egestas dui id ornare arcu odio.	
+		</p>
+		<p>
+				Dui accumsan sit amet nulla facilisi morbi tempus iaculis urna. Pellentesque diam volutpat commodo sed. Ac felis donec et odio. Pellentesque eu tincidunt tortor aliquam. Congue quisque egestas diam in arcu cursus euismod quis. A arcu cursus vitae congue. Vitae auctor eu augue ut lectus. Risus nec feugiat in fermentum. Id interdum velit laoreet id donec ultrices tincidunt. Lobortis mattis aliquam faucibus purus in massa tempor nec feugiat. Euismod elementum nisi quis eleifend quam adipiscing vitae proin. Porttitor lacus luctus accumsan tortor posuere ac ut. Adipiscing elit pellentesque habitant morbi tristique. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Nisl tincidunt eget nullam non nisi est sit amet.
+		</p>
+	  </div>
 </body>
 
 <footer>
-	<div id="contactTitle">
-		Contact Beyond Toxics
-	</div>
-	<div id="contactInfo1">
-		<th>Lane County Office:	</th>
-		
-	</div>
-	<div id="contactInfo2">
-		Contact Beyond Toxics
+	<div class="row">
+		<div class="col-sm">
+		One of three columns
+		</div>
+		<div class="col-sm">
+		One of three columns
+		</div>
+		<div class="col-sm">
+		One of three columns
+		</div>
 	</div>
 </footer>
+
+
+<script type="text/javascript" src="java/styles.js"></script>
 
 </html>
