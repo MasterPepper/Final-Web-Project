@@ -22,26 +22,28 @@ header > .row {
 }
 
 /*A style guide for the map ID object*/
-#map { 
-    position:absolute; 
-    top:0; 
-    bottom:0; 
-    width:100%; 
+#map {
+	margin: 0px auto;
+	width: 1280px;
+	height: 720px; 
 }
 
 #headerMain {
 	margin: 0px auto;
 	color: #E8F3E8;
 	padding-left: 20%;
+    font-size: 30px;
 }
 
 body {
 	margin-top: 60px;
 	background-color: #E8F3E8;
 	height: 100%;
+	/* width: 100%; */
 }
 
 .container {
+    font-size: 18px;
 	width: 80%;
 }
 
@@ -54,10 +56,12 @@ footer {
 	background-color: #0A3409;
 	color: #559E54;
 	width: 100%;
-	position: absolute;
+	position: relative;
 	bottom: 0px;
+	height: max-content;
+	align-content: center;
 }
 
-footer > .row {
-	display: inline-flex;
+footer > .row > .col-2 {
+	margin: auto;
 }
