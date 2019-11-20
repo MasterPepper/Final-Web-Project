@@ -24,34 +24,42 @@
 
 <body>
 
+	<!-- Used for all content on the top of the page (header) -->
 	<header>
 	
 		<div class="row">
-			<div class="col-1">
-			</div>
-			<div class="col-1">
-				<div class="tabs">
-					<button onclick="window.location.href = '';">Home</button>
-				</div>
-			</div>
-			<div class="col-1">
-				<div class="tabs">
-					<button onclick="window.location.href = 'https://www.beyondtoxics.org/about/';">About</button>
-					
-				</div>
-			</div>
+			<div class="col-3"> </div>
+
 			<div class="col-9" id="headerMain">
 				Beyond Toxics 
 			</div>
-			
-			<div class="col-1"></div>
 				
-			</div>
+		</div>
 		
 	</header>
 
-	<div id="map"></div>
+	<!-- This div is used exclusively for the map and its contents -->
+	<div id="map">
 
+		<!-- The following DIV is used to display the tooltip that informs the viewer of what they are looking at.-->
+		<div class="descriptionPanel" id="descriptionPanel" style="height: 250px;">
+			<span onClick=panelSelect() id="glyph" class="chevron glyphicon glyphicon-chevron-down"> Legend</span>
+			<hr />
+			<h4>Oregon State Forest Aerial Sprays</h4><br />
+
+			<div class="legendItem">
+					<div class="colorBox" style="background-color: hsl(210, 90%, 32%)"></div>
+					<div class="layerDescription"> Chemical A</div>
+				</div>
+				<div class="legendItem">
+					<div class="colorBox" style="background-color: #de2d26;"></div>
+					<div class="layerDescription"> Chemical B</div>
+				</div>
+		</div>
+	
+	</div>
+
+	<!-- This contains all the text featured throughout the base of the page -->
 	<div class="container">
 
         <p>
@@ -84,79 +92,81 @@
 
 	</div>
 
-<footer>
-	<div class="row">
-		<div class="col-1"></div>
+	<!-- This is used for the foot of the page where contact info is featured -->
+	<footer>
+		<div class="row">
+			<div class="col-1"></div>
 
-		<div class="col-2">
-			Contact Beyond Toxics:
-		</div>
-
-		<div class="col-2">
-
-			<div class="row">
-				<u>Lane County Office:</u>
+			<div class="col-2">
+				Contact Beyond Toxics:
 			</div>
 
-			<div class="row">
-					Sheton McMurphey Blvd
-			</div>
-
-			<div class="row">
-					Suite 280, Eugene, OR 97401
-			</div>
-		</div>
-
-		<div class="col-2">
+			<div class="col-2">
 
 				<div class="row">
-					<u>Jackson County Office:</u>
+					<u>Lane County Office:</u>
 				</div>
 
 				<div class="row">
-						312 N. Main St., Suite B
+						Sheton McMurphey Blvd
 				</div>
 
 				<div class="row">
-						Phoenix, Oregon 97535
+						Suite 280, Eugene, OR 97401
 				</div>
+			</div>
+
+			<div class="col-2">
+
+					<div class="row">
+						<u>Jackson County Office:</u>
+					</div>
+
+					<div class="row">
+							312 N. Main St., Suite B
+					</div>
+
+					<div class="row">
+							Phoenix, Oregon 97535
+					</div>
+			</div>
+
+			<div class="col-2">
+
+				<div class="row">
+					<u>Mail:</u>
+				</div>
+
+				<div class="row">
+					P.O. Box 1106,
+				</div>
+
+
+				<div class="row">
+					Eugene, OR 97440
+				</div>
+					
+			</div>
+
+			<div class="col-2">
+
+				<div class="row">
+					<u>Phone Number:</u>
+				</div>
+
+				<div class="row">
+					(541) 465-8860
+				</div>
+					
+			</div>
+			
 		</div>
-
-		<div class="col-2">
-
-			<div class="row">
-				<u>Mail:</u>
-			</div>
-
-			<div class="row">
-				P.O. Box 1106,
-			</div>
-
-
-			<div class="row">
-				Eugene, OR 97440
-			</div>
-				
-		</div>
-
-		<div class="col-2">
-
-			<div class="row">
-				<u>Phone Number:</u>
-			</div>
-
-			<div class="row">
-				(541) 465-8860
-			</div>
-				
-		</div>
-		
-	</div>
-</footer>
+	</footer>
 
 
 </body>
 
+<!-- Call in external JS used to make the map work -->
 <script type="text/javascript" src="java/styles.js"></script>
 
 </html>
