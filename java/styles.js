@@ -3,7 +3,7 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     center: [-120.1178, 44.3762], 
     zoom: '6',
-    style: 'mapbox://styles/awise3/ck2v4dwwi0efk1clkdzhpvwql', // stylesheet location
+    style: 'mapbox://styles/awise3/ck37ukgp01dkr1cmwtet19o9e', // stylesheet location
 });
 
 // Add zoom and rotation controls to the map.
