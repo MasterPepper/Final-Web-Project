@@ -24,7 +24,7 @@ header > .row {
 #map {
 	margin: 10px auto;
 	width: 1280px;
-	height: 720px; 
+	height: 720px;
 }
 
 #headerMain {
@@ -36,13 +36,14 @@ header > .row {
 
 body {
 	margin-top: 60px;
-	background-color: #E8F3E8;
+	background-color: #9BD770;
 	height: 100%;
 }
 
 .container {
     font-size: 18px;
 	width: 80%;
+	background-color: #E8F3E8;
 }
 
 .container > .row {
