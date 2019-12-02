@@ -1,15 +1,15 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXdpc2UzIiwiYSI6ImNrMWd4OW12MDE5Z2wzZG50M2Nhem81Y3UifQ.Jxul5R6VJcY7NXbtWGqz0g';
 
 var bounds = [
-    [-126, 40], // Southwest coordinates
-    [-114, 48]  // Northeast coordinates
+    [-126, 41.75], // Southwest coordinates
+    [-113, 47]  // Northeast coordinates
     ];
 
 var map = new mapboxgl.Map({
     container: 'map', // container id
     center: [-120.1178, 44.3762], 
     zoom: '6.5',
-    style: 'mapbox://styles/awise3/ck37ukgp01dkr1cmwtet19o9e/draft', // stylesheet location
+    style: 'mapbox://styles/awise3/ck37ukgp01dkr1cmwtet19o9e', // stylesheet location
     maxBounds: bounds,
 });
 
@@ -33,11 +33,6 @@ function panelSelect(e) {
     }
 }
 
-
-var bounds = [
-[-74.04728500751165, 40.68392799015035], // Southwest coordinates
-[-73.91058699000139, 40.87764500765852]  // Northeast coordinates
-];
 
 // The next three functions are used to select counties
 map.on('load', function() {
@@ -71,26 +66,46 @@ map.on('load', function() {
     },
     "filter": ["in", "FIPS", ""]
     }, 'settlement-label'); // Place polygon under these labels.
-     
-    map.on('click', function(e) {
-        // set bbox as 5px reactangle area around clicked point
-        var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
-        var features = map.queryRenderedFeatures(bbox, { layers: ['counties'] });
-        // Run through the selected features and set a filter
-        // to match features with unique FIPS codes to activate
-        // the `counties-highlighted` layer.
-        var filter = features.reduce(function(memo, feature) {
-        memo.push(feature.properties.FIPS);
-        return memo;
-        }, ['in', 'FIPS']);
+//     
+//    map.on('click', function(e) {
+//        // set bbox as 5px reactangle area around clicked point
+//        var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
+//        var features = map.queryRenderedFeatures(bbox, { layers: ['counties'] });
+//        
+//        // Run through the selected features and set a filter
+//        // to match features with unique FIPS codes to activate
+//        // the `counties-highlighted` layer.
+//        var filter = features.reduce(function(memo, feature) {
+//        memo.push(feature.properties.FIPS);
+//        return memo;
+//        }, ['in', 'FIPS']);
+//        
+//        map.setFilter("counties-highlighted", filter);
+//
+////        document.getElementById('info').innerHTML =
+////            // e.point is the x, y coordinates of the mousemove event relative
+////            // to the top-left corner of the map
+////            JSON.stringify(e.point) + '<br />' +
+////            // e.lngLat is the longitude, latitude geographical position of the event
+////            JSON.stringify(e.lngLat.wrap());
+//        console.log(bbox);
+//        
+//        map.fitBounds(bbox);
+////        map.flyTo({
+////            center: [JSON.stringify(e.lngLat.wrap())],
+////        });
+//        
+//        
+//    });
+//    
+    
+    map.on('click', 'counties', function (e) {
+//        new mapboxgl.Popup()
+//        .setLngLat(e.lngLat)
+//        .setHTML(e.features[0].properties.name)
+//        .addTo(map);
         
-        map.setFilter("counties-highlighted", filter);
-
-        
-        map.flyTo({
-            center: [e.point.x, e.point.y],
-            zoom: '11',
-        });
+        console.log(e.features[0].geometry.getBounds());
     });
 
 });
