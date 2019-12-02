@@ -33,10 +33,12 @@ function panelSelect(e) {
     }
 }
 
+
 var bounds = [
 [-74.04728500751165, 40.68392799015035], // Southwest coordinates
 [-73.91058699000139, 40.87764500765852]  // Northeast coordinates
 ];
+
 // The next three functions are used to select counties
 map.on('load', function() {
     // Add the source to query. In this example we're using
@@ -53,7 +55,7 @@ map.on('load', function() {
     "source-layer": "original",
     "paint": {
     "fill-outline-color": "rgba(0,0,0,0.1)",
-    "fill-color": "rgba(0,0,0,0.1)"
+    "fill-color": "rgba(0,0,0,0)"
     }
     }, 'settlement-label'); // Place polygon under these labels.
      
@@ -71,18 +73,24 @@ map.on('load', function() {
     }, 'settlement-label'); // Place polygon under these labels.
      
     map.on('click', function(e) {
-    // set bbox as 5px reactangle area around clicked point
-    var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
-    var features = map.queryRenderedFeatures(bbox, { layers: ['counties'] });
-     
-    // Run through the selected features and set a filter
-    // to match features with unique FIPS codes to activate
-    // the `counties-highlighted` layer.
-    var filter = features.reduce(function(memo, feature) {
-    memo.push(feature.properties.FIPS);
-    return memo;
-    }, ['in', 'FIPS']);
-     
-    map.setFilter("counties-highlighted", filter);
+        // set bbox as 5px reactangle area around clicked point
+        var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
+        var features = map.queryRenderedFeatures(bbox, { layers: ['counties'] });
+        // Run through the selected features and set a filter
+        // to match features with unique FIPS codes to activate
+        // the `counties-highlighted` layer.
+        var filter = features.reduce(function(memo, feature) {
+        memo.push(feature.properties.FIPS);
+        return memo;
+        }, ['in', 'FIPS']);
+        
+        map.setFilter("counties-highlighted", filter);
+
+        
+        map.flyTo({
+            center: [e.point.x, e.point.y],
+            zoom: '11',
+        });
     });
+
 });
