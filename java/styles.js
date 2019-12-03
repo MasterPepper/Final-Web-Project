@@ -54,58 +54,23 @@ map.on('load', function() {
     }
     }, 'settlement-label'); // Place polygon under these labels.
      
-    map.addLayer({
-    "id": "counties-highlighted",
-    "type": "fill",
-    "source": "counties",
-    "source-layer": "original",
-    "paint": {
-    "fill-outline-color": "#484896",
-    "fill-color": "#bbeda4",
-    "fill-opacity": 0.75
-    },
-    "filter": ["in", "FIPS", ""]
-    }, 'settlement-label'); // Place polygon under these labels.
-//     
-//    map.on('click', function(e) {
-//        // set bbox as 5px reactangle area around clicked point
-//        var bbox = [[e.point.x - 5, e.point.y - 5], [e.point.x + 5, e.point.y + 5]];
-//        var features = map.queryRenderedFeatures(bbox, { layers: ['counties'] });
-//        
-//        // Run through the selected features and set a filter
-//        // to match features with unique FIPS codes to activate
-//        // the `counties-highlighted` layer.
-//        var filter = features.reduce(function(memo, feature) {
-//        memo.push(feature.properties.FIPS);
-//        return memo;
-//        }, ['in', 'FIPS']);
-//        
-//        map.setFilter("counties-highlighted", filter);
-//
-////        document.getElementById('info').innerHTML =
-////            // e.point is the x, y coordinates of the mousemove event relative
-////            // to the top-left corner of the map
-////            JSON.stringify(e.point) + '<br />' +
-////            // e.lngLat is the longitude, latitude geographical position of the event
-////            JSON.stringify(e.lngLat.wrap());
-//        console.log(bbox);
-//        
-//        map.fitBounds(bbox);
-////        map.flyTo({
-////            center: [JSON.stringify(e.lngLat.wrap())],
-////        });
-//        
-//        
-//    });
-//    
-    
+
     map.on('click', 'counties', function (e) {
-//        new mapboxgl.Popup()
-//        .setLngLat(e.lngLat)
-//        .setHTML(e.features[0].properties.name)
-//        .addTo(map);
+
+        // SEVERAL ADDITIONS FOR BOXING:
+
+        // var bbox = new mapboxgl.Popup().setLngLat(e.lngLat)._lngLat
+        // map.fitBounds(bbox)
+        // console.log(bbox)
+        // END OF BOXING STUFF
+
+        var newCoords = new mapboxgl.Popup().setLngLat(e.lngLat)._lngLat
+        map.flyTo({
+            center: [newCoords.lng, newCoords.lat],
+            zoom: 7,
+        });
         
-        console.log(e.features[0].geometry.getBounds());
+        // console.log(newCoords);
     });
 
 });
