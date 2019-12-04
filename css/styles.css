@@ -118,3 +118,15 @@ footer > .row > .col-2 {
 	float: left;
 	margin-left: 10px;
 }
+
+table {
+	width: 100%;
+}
+table, td, tr, th {
+	border: 1px solid black;
+	align-content: center;
+	margin: 0px auto;
+	padding: 2px 5px !important;
+
+	text-align: center !important;
+}
