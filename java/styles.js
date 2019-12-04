@@ -8,7 +8,7 @@ var bounds = [
 var map = new mapboxgl.Map({
     container: 'map', // container id
     center: [-120.1178, 44.3762], 
-    zoom: '6.5',
+    zoom: '5',
     style: 'mapbox://styles/awise3/ck37ukgp01dkr1cmwtet19o9e', // stylesheet location
     maxBounds: bounds,
 });
@@ -57,18 +57,13 @@ map.on('load', function() {
 
     map.on('click', 'counties', function (e) {
 
-        // SEVERAL ADDITIONS FOR BOXING:
+        var newCoords = new mapboxgl.Popup().setLngLat(e.lngLat)._lngLat
 
-        // var bbox = new mapboxgl.Popup().setLngLat(e.lngLat)._lngLat
-        // map.fitBounds(bbox)
+        // SEVERAL ADDITIONS FOR BOXING:
+        var bbox = [[newCoords.lng + 1, newCoords.lat + 1], [newCoords.lng - 1, newCoords.lat - 1]]
+        map.fitBounds(bbox)
         // console.log(bbox)
         // END OF BOXING STUFF
-
-        var newCoords = new mapboxgl.Popup().setLngLat(e.lngLat)._lngLat
-        map.flyTo({
-            center: [newCoords.lng, newCoords.lat],
-            zoom: 7,
-        });
         
         // console.log(newCoords);
     });
